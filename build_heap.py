@@ -39,9 +39,10 @@ def main():
     elif "F" in text:
         filen = input()
         with open(("./tests/" + filen), "r") as file:
-            n = int(file.readline())
-            data = list(map(int, file.readline().split()))
-            assert len(data) == n
+            while(not EOFError):
+                n = int(file.readline())
+                data = list(map(int, file.readline().split()))
+                assert len(data) == n
     # input from keyboard
     # checks if length of data is the same as the said length
     #assert len(data) == n
