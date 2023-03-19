@@ -35,14 +35,16 @@ def main():
     if "I" in text:
         n = int(input())
         data = list(map(int, input().split()))
+        assert len(data) == n
     elif "F" in text:
         filen = input()
         with open(("./test/" + filen), "r") as file:
             n = int(file.readline())
             data = list(map(int, file.readline().split()))
+            assert len(data) == n
     # input from keyboard
     # checks if length of data is the same as the said length
-    # assert len(data) == n
+    #assert len(data) == n
 
     # calls function to assess the data
     # and give back all swaps
